@@ -1,0 +1,25 @@
+<h1>
+  Browse the Ledger!
+</h1>
+<table>
+  <thead>
+    <th>Action</th>
+    <th>Amount</th>
+    <th>Value</th>
+    <th></th>
+  </thead>
+  <tbody *ngFor="let i of key_vals">
+      <td>{{ledgers[i].action}}</td>
+      <td>{{ledgers[i].amount}}</td>
+      <td>{{ledgers[i].value}}</td>
+      <button id="{{i}}" (click)="details($event)">Details</button>
+  </tbody>
+
+  <div *ngIf="show">
+    <h1>Ledger Details</h1>
+    <h2>Action:  {{detail_ledger.action}}</h2>
+    <h2>Amount:  {{detail_ledger.amount}}</h2>
+    <h2>Value:  {{detail_ledger.value}}</h2>
+  </div>
+
+</table>

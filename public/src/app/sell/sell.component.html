@@ -1,0 +1,13 @@
+<h1>
+  Sell Shinto Coins
+</h1>
+<h3>
+  Current Shinto Coin Value: {{money[0]}}
+</h3>
+<h3>
+  Number of Shinto Coins Owned: {{money[1]}}
+</h3>
+<form (submit)="sellCoins($event)">
+    <input type='number' placeholder="number" name="sell">
+    <input type='submit' value='Sell Coins'>
+</form> 
